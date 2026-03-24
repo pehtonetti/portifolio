@@ -296,7 +296,7 @@ function App() {
                         <p className="text-lg text-charcoal/70 mb-12 max-w-xl mx-auto font-light">
                             Desenvolvimento *pixel-perfect*, interfaces responsivas e uma atenção rigorosa aos detalhes estéticos. Vamos elevar a qualidade digital da sua marca juntos.
                         </p>
-                        <a href="mailto:pedro@exemplo.com.br" className="inline-flex items-center gap-3 px-10 py-5 bg-charcoal text-ivory rounded-full text-sm font-semibold tracking-widest uppercase hover:bg-blush hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <a href="mailto:pedrotonetti@gmail.com" className="inline-flex items-center gap-3 px-10 py-5 bg-charcoal text-ivory rounded-full text-sm font-semibold tracking-widest uppercase hover:bg-blush hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                             <SVGMail /> Dizer Olá
                         </a>
                     </motion.div>
