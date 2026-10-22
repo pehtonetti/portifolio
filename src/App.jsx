@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import FotenhoImg from './assets/Fotenho.png';
+import FotenhoImg from './assets/Fotenho.webp';
 const SVGMail = () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>;
 const SVGArrowUpRight = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>;
 const SVGGithub = () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>;
@@ -79,12 +79,13 @@ const Navbar = () => {
 };
 
 const companies = [
-    { name: "Adecoagro", desc: "Atuação em soluções web para o agronegócio envolvendo JS, HTML, CSS, Suporte Nível 1 e 2, organização de contas e projetos focados em Mobiles.", logo: "https://logo.clearbit.com/adecoagro.com", link: "https://www.adecoagro.com", tags: ["Suporte N1/N2", "Mobile", "Contas", "JS"] },
-    { name: "Sociedade São Vicente de Paula (SSVP)", desc: "Projeto de impacto social e digital, conectando propósitos em prol da filantropia.", logo: "https://ssvpbrasil.org.br/wp-content/uploads/2021/05/logo_ssvp_novo-1-300x127.png", link: "https://ssvpbrasil.org.br/", tags: ["UX/UI Design", "Figma", "HTML", "CSS"] },
-    { name: "AELESAB", desc: "Coordenador da parte T.I da empresa, responsável pelo desenvolvimento do site e da parte documental do sistema atual deles.", logo: "https://logo.clearbit.com/aelesab.org.br", link: "https://www.aelesab.org.br/", tags: ["WordPress", "Temas", "HTML", "CSS", "JS"] },
-    { name: "MSTECH", desc: "Desenvolvimento web focado em educação, atuando com o kit básico de Web Design, além de trabalhos como diagramador e revisador.", logo: "https://logo.clearbit.com/mstech.com.br", link: "https://www.mstech.com.br/", tags: ["Web Design", "Diagramador", "Revisador", "HTML/CSS/JS"] },
-    { name: "Saturno Informática", desc: "Criação de soluções em automação e desenvolvimento de interfaces corporativas.", logo: "https://logo.clearbit.com/saturnoinfo.com.br", link: "https://www.saturnoinfo.com.br/", tags: ["C#", "SQL Server", "Frontend", "Automação"] },
-    { name: "Petty Tecnologia", desc: "Engenharia de software e consultoria técnica especializada.", logo: "https://logo.clearbit.com/petrytecnologia.com.br", link: "https://petrytecnologia.com.br/", tags: ["React Native", "Arquitetura Web", "Node.js"] }
+    { name: "Indexnet", initials: "IN", desc: "Desenvolvimento e manutenção de sites, landing pages e lojas virtuais em WordPress, Tray e PHP, administração dos servidores de hospedagem (cPanel/WHM, DNS, SSL, e-mail) e suporte técnico aos clientes da agência.", link: "https://indexnet.com.br", tags: ["WordPress", "PHP", "Tray", "cPanel/WHM", "Suporte"] },
+    { name: "Adecoagro", initials: "AD", desc: "Atuação em soluções web para o agronegócio envolvendo JS, HTML, CSS, Suporte Nível 1 e 2, organização de contas e projetos focados em Mobiles.", logo: "https://logo.clearbit.com/adecoagro.com", link: "https://www.adecoagro.com", tags: ["Suporte N1/N2", "Mobile", "Contas", "JS"] },
+    { name: "Sociedade São Vicente de Paula (SSVP)", initials: "SS", desc: "Projeto de impacto social e digital, conectando propósitos em prol da filantropia.", logo: "https://ssvpbrasil.org.br/wp-content/uploads/2021/05/logo_ssvp_novo-1-300x127.png", link: "https://ssvpbrasil.org.br/", tags: ["UX/UI Design", "Figma", "HTML", "CSS"] },
+    { name: "AELESAB", initials: "AE", desc: "Coordenador da parte T.I da empresa, responsável pelo desenvolvimento do site e da parte documental do sistema atual deles.", logo: "https://logo.clearbit.com/aelesab.org.br", link: "https://www.aelesab.org.br/", tags: ["WordPress", "Temas", "HTML", "CSS", "JS"] },
+    { name: "MSTECH", initials: "MS", desc: "Desenvolvimento web focado em educação, atuando com o kit básico de Web Design, além de trabalhos como diagramador e revisador.", logo: "https://logo.clearbit.com/mstech.com.br", link: "https://www.mstech.com.br/", tags: ["Web Design", "Diagramador", "Revisador", "HTML/CSS/JS"] },
+    { name: "Saturno Informática", initials: "SI", desc: "Criação de soluções em automação e desenvolvimento de interfaces corporativas.", logo: "https://logo.clearbit.com/saturnoinfo.com.br", link: "https://www.saturnoinfo.com.br/", tags: ["C#", "SQL Server", "Frontend", "Automação"] },
+    { name: "Petty Tecnologia", initials: "PT", desc: "Engenharia de software e consultoria técnica especializada.", logo: "https://logo.clearbit.com/petrytecnologia.com.br", link: "https://github.com/pehtonetti", tags: ["React Native", "Arquitetura Web", "Node.js"] }
 ];
 
 const technologies = [
@@ -206,16 +207,7 @@ function App() {
                                 
                                 <div className="flex items-center gap-5 mb-6">
                                     <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center p-3 shadow-md border border-charcoal/5 shrink-0 overflow-hidden">
-                                        <img 
-                                            src={company.logo} 
-                                            alt={`${company.name} Logo`} 
-                                            className="max-h-full max-w-full object-contain filter grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
-                                            onError={(e) => {
-                                                e.target.style.display = 'none';
-                                                e.target.nextSibling.style.display = 'flex';
-                                            }}
-                                        />
-                                        <span style={{ display: 'none' }} className="font-heading font-black text-2xl text-charcoal w-full h-full items-center justify-center bg-ivory rounded-xl">{company.name.charAt(0)}</span>
+                                        <span aria-hidden="true" className="flex font-heading font-bold text-xl tracking-tight text-charcoal w-full h-full items-center justify-center bg-ivory rounded-xl transition-colors duration-500 group-hover:bg-blush group-hover:text-ivory">{company.initials || company.name.charAt(0)}</span>
                                     </div>
                                     <h3 className="font-heading text-[1.7rem] text-gradient m-0 leading-tight">{company.name}</h3>
                                 </div>
