@@ -79,13 +79,14 @@ const Navbar = () => {
 };
 
 const companies = [
-    { name: "Indexnet", initials: "IN", desc: "Desenvolvimento e manutenção de sites, landing pages e lojas virtuais em WordPress, Tray e PHP, administração dos servidores de hospedagem (cPanel/WHM, DNS, SSL, e-mail) e suporte técnico aos clientes da agência.", link: "https://indexnet.com.br", tags: ["WordPress", "PHP", "Tray", "cPanel/WHM", "Suporte"] },
-    { name: "Adecoagro", initials: "AD", desc: "Atuação em soluções web para o agronegócio envolvendo JS, HTML, CSS, Suporte Nível 1 e 2, organização de contas e projetos focados em Mobiles.", logo: "https://logo.clearbit.com/adecoagro.com", link: "https://www.adecoagro.com", tags: ["Suporte N1/N2", "Mobile", "Contas", "JS"] },
-    { name: "Sociedade São Vicente de Paula (SSVP)", initials: "SS", desc: "Projeto de impacto social e digital, conectando propósitos em prol da filantropia.", logo: "https://ssvpbrasil.org.br/wp-content/uploads/2021/05/logo_ssvp_novo-1-300x127.png", link: "https://ssvpbrasil.org.br/", tags: ["UX/UI Design", "Figma", "HTML", "CSS"] },
-    { name: "AELESAB", initials: "AE", desc: "Coordenador da parte T.I da empresa, responsável pelo desenvolvimento do site e da parte documental do sistema atual deles.", logo: "https://logo.clearbit.com/aelesab.org.br", link: "https://www.aelesab.org.br/", tags: ["WordPress", "Temas", "HTML", "CSS", "JS"] },
-    { name: "MSTECH", initials: "MS", desc: "Desenvolvimento web focado em educação, atuando com o kit básico de Web Design, além de trabalhos como diagramador e revisador.", logo: "https://logo.clearbit.com/mstech.com.br", link: "https://www.mstech.com.br/", tags: ["Web Design", "Diagramador", "Revisador", "HTML/CSS/JS"] },
-    { name: "Saturno Informática", initials: "SI", desc: "Criação de soluções em automação e desenvolvimento de interfaces corporativas.", logo: "https://logo.clearbit.com/saturnoinfo.com.br", link: "https://www.saturnoinfo.com.br/", tags: ["C#", "SQL Server", "Frontend", "Automação"] },
-    { name: "Petty Tecnologia", initials: "PT", desc: "Engenharia de software e consultoria técnica especializada.", logo: "https://logo.clearbit.com/petrytecnologia.com.br", link: "https://github.com/pehtonetti", tags: ["React Native", "Arquitetura Web", "Node.js"] }
+    { name: "Indexnet", initials: "IN", period: "2026 – atual · Desenvolvedor Web", desc: "Desenvolvimento e manutenção de sites, landing pages e lojas virtuais em WordPress, Tray e PHP, com foco em SEO técnico e performance. Administração dos servidores de hospedagem (cPanel/WHM, DNS, SSL e e-mail) e suporte aos clientes da agência via Zendesk.", link: "https://indexnet.com.br", tags: ["PHP", "JavaScript", "WordPress", "Tray", "cPanel/WHM", "SEO", "Zendesk"] },
+    { name: "AELESAB", initials: "AE", period: "2024 – 2025 · Assistente de TI", desc: "Responsável pela área de TI da organização: desenvolvimento do novo sistema interno, site em WordPress, administração de redes, documentação técnica e suporte aos usuários com Zendesk.", link: "https://www.aelesab.org.br/", tags: ["PHP", "WordPress", "JavaScript", "Redes", "Documentação", "Zendesk"] },
+    { name: "Paschoalotto", initials: "PA", period: "2022 – 2024 · Assistente Administrativo", desc: "Atendimento e comunicação com clientes, organização de processos corporativos e gestão de chamados em ferramentas de help desk como o Zendesk.", link: "https://www.paschoalotto.com.br/", tags: ["Atendimento", "Processos", "Zendesk", "Microsoft 365"] },
+    { name: "Petty Tecnologia", initials: "PT", period: "2021 – atual · Freelancer", desc: "Sites, sistemas e aplicativos sob demanda com PHP, JavaScript, Node.js e React Native, do levantamento de requisitos à publicação, para clientes como a Borges Engenharia.", link: "https://github.com/pehtonetti", tags: ["PHP", "JavaScript", "Node.js", "React", "React Native"] },
+    { name: "Adecoagro", initials: "AD", period: "2020 – 2022 · Assistente de Suporte de TI", desc: "Suporte N1/N2 com Zendesk, Active Directory, Microsoft 365 e acesso remoto, gestão de contas e documentação. Desenvolvimento de um sistema de gestão em Java para a operação industrial, com módulos de RH, logística e prestação de contas.", link: "https://www.adecoagro.com", tags: ["Java", "Suporte N1/N2", "Zendesk", "Active Directory", "JavaScript"] },
+    { name: "Saturno Informática", initials: "SI", period: "2015 – 2018 · Desenvolvimento", desc: "Soluções de automação e interfaces corporativas em C# com banco de dados SQL Server.", link: "https://www.saturnoinfo.com.br/", tags: ["C#", "SQL Server", "Automação", "Front-end"] },
+    { name: "Lar São Vicente de Paulo (SSVP)", initials: "SV", period: "2015 · Projeto de TCC", desc: "Site institucional para o lar de idosos, do protótipo no Figma à implementação em HTML e CSS, desenvolvido como trabalho de conclusão do curso técnico.", link: "https://ssvpbrasil.org.br/", tags: ["UX/UI", "Figma", "HTML", "CSS"] },
+    { name: "MStech", initials: "MS", period: "2012 – 2014 · Web Designer", desc: "Desenvolvimento web para educação com HTML, CSS, JavaScript e AngularJS, além de diagramação e revisão de conteúdo.", link: "https://www.mstech.com.br/", tags: ["Web Design", "AngularJS", "HTML/CSS/JS", "Diagramação"] }
 ];
 
 const technologies = [
@@ -209,7 +210,10 @@ function App() {
                                     <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center p-3 shadow-md border border-charcoal/5 shrink-0 overflow-hidden">
                                         <span aria-hidden="true" className="flex font-heading font-bold text-xl tracking-tight text-charcoal w-full h-full items-center justify-center bg-ivory rounded-xl transition-colors duration-500 group-hover:bg-blush group-hover:text-ivory">{company.initials || company.name.charAt(0)}</span>
                                     </div>
-                                    <h3 className="font-heading text-[1.7rem] text-gradient m-0 leading-tight">{company.name}</h3>
+                                    <div>
+                                        <h3 className="font-heading text-[1.7rem] text-gradient m-0 leading-tight">{company.name}</h3>
+                                        {company.period && <p className="mt-1 text-xs uppercase tracking-widest text-charcoal/50">{company.period}</p>}
+                                    </div>
                                 </div>
                                 <p className="text-charcoal/60 font-light leading-relaxed flex-grow">{company.desc}</p>
                                 
