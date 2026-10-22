@@ -18,7 +18,7 @@ Site pessoal com minha trajetória, as tecnologias que uso e meus canais de cont
 - Cursor customizado no desktop, desativado no mobile
 - Navbar que muda de estilo ao rolar a página
 - Layout responsivo, mobile first, com **Tailwind CSS**
-- Deploy automatizado no **GitHub Pages** via `gh-pages`
+- Deploy automático no **GitHub Pages** com GitHub Actions a cada push na `main`
 
 ## Como rodar localmente
 
@@ -31,9 +31,7 @@ npm run dev
 
 ## Deploy
 
-```bash
-npm run deploy   # gera o build e publica a pasta dist/ na branch gh-pages
-```
+Automático: todo push na branch `main` roda o workflow [`deploy.yml`](.github/workflows/deploy.yml), que gera o build e publica no GitHub Pages.
 
 ## Estrutura
 
