@@ -1,16 +1,49 @@
-# React + Vite
+# Portfólio · Pedro Tonetti
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site pessoal com minha trajetória, as tecnologias que uso e meus canais de contato.
 
-Currently, two official plugins are available:
+**🔗 [pehtonetti.github.io/portifolio](https://pehtonetti.github.io/portifolio/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?logo=framer&logoColor=white)
 
-## React Compiler
+<!-- Adicione um print da home: salve em docs/preview.png e descomente a linha abaixo -->
+<!-- ![Preview do portfólio](docs/preview.png) -->
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Destaques
 
-## Expanding the ESLint configuration
+- Animações de entrada e scroll com **Framer Motion**
+- Cursor customizado no desktop, desativado no mobile
+- Navbar que muda de estilo ao rolar a página
+- Layout responsivo, mobile first, com **Tailwind CSS**
+- Deploy automatizado no **GitHub Pages** via `gh-pages`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Como rodar localmente
+
+```bash
+git clone https://github.com/pehtonetti/portifolio.git
+cd portifolio
+npm install
+npm run dev
+```
+
+## Deploy
+
+```bash
+npm run deploy   # gera o build e publica a pasta dist/ na branch gh-pages
+```
+
+## Estrutura
+
+```text
+src/
+├── App.jsx        # Seções: hero, sobre, trajetória, tecnologias, contato
+├── index.css      # Estilos globais e camadas do Tailwind
+└── assets/        # Imagens
+```
+
+## Contato
+
+[LinkedIn](https://www.linkedin.com/in/pedrotonetti/) · pedrotonetti@gmail.com
